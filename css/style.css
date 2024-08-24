@@ -1,0 +1,114 @@
+*{
+    padding: 0px;
+    margin:0px;
+}/*Sabhi ki by default margin aur padding hum zero rakh rahe hain*/
+nav{
+    background-color: black;
+    color:white;
+    margin:0px;
+    height:40px;
+}
+nav ul li{
+    list-style: none;
+    padding-top:7px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.game-container{
+    height:500px; 
+    width:100vw;
+    display:flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.lcontainer{
+    display:grid;
+    grid-template-columns: repeat(3,12vw);
+    grid-template-rows: repeat(3,12vw);
+    padding:0 30px;
+    position: relative;
+}
+.box{
+    border:2px solid black;
+    font-size: 8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    background-color: pink;
+    cursor:pointer;
+}
+.imgBox img{
+    height:150px;
+    width:0px;
+    transition: width ease-in-out 1s;
+}
+.bt0
+{
+    border-top: 0;
+}
+.bb0
+{
+    border-bottom: 0;
+}
+.br0{
+    border-right: 0;
+}
+.bl0{
+    border-left: 0;
+}
+#reset{
+    margin-top: 10px;
+    width:100px;
+    padding: 6px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: pink;
+    font-size: 1.2rem;
+}
+.info{
+    font-size: 1.5rem;
+}
+.rcontainer h1{
+    font-size: 2.5rem;
+}
+.information{
+    display: flex;
+    flex-direction: column; 
+}
+
+/*Designing the line*/
+.line{
+    height:4px;
+    width:0;
+    background-color: green;
+    position: absolute;
+    top:0px;
+   /* display:none;*/
+    border-radius: 5px;
+    transition: width ease-in-out 2s;
+}
+
+/*Media Queries for the Responsive design in CSS*/
+@media only screen and (max-width:800px){
+    .game-container{
+        flex-wrap: wrap;
+    }
+    .rcontainer{
+        margin-top: 32px;
+        text-align: center;
+    }
+    .rcontainer h1{
+        font-size: 1.5rem;
+    }
+    .lcontainer{
+        display:grid;
+        grid-template-columns: repeat(3,20vw);
+        grid-template-rows: repeat(3,20vw);
+    }
+    #reset{
+        width:350px;
+    }    
+}
